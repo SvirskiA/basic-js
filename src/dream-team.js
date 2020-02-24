@@ -1,7 +1,7 @@
 // ['Brenda', 'Terry', 'Karen', 'Deborah', 'Samantha', 'Roy', 'Helen', 'Victoria', 'Adam', 'Michelle']
 // 'ABDHKMRSTV' - ABDHKMRSTV
 //let createDreamTeam = function (members) {
-  module.exports = function createDreamTeam(members) {  // эта строка нужна
+  module.exports =   function createDreamTeam(members) {  // эта строка нужна
   let sortMembers;
   let team = '';
   if (typeof members === 'object' && (members != null)) {
@@ -35,6 +35,6 @@
 };
 // let arr = ['Brenda', 'Terry', 'Karen', 'Deborah', 'Samantha', 'Roy', 'Helen', 'Victoria', 'Adam', 'Michelle'];
 // //let arr = 123;
-// let aa = createDreamTeam(arr);
+// let aa = createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]);
 // console.log(aa);
 // console.log(typeof arr === 'object');
