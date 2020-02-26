@@ -4,7 +4,7 @@
   module.exports =   function createDreamTeam(members) {  // эта строка нужна
   let sortMembers;
   let team = '';
-  if (typeof members === 'object' && (members != null)) {
+  if (typeof members === 'object' && (members != null) && arguments[0]) {
   //  console.log('good');
     sortMembers = members.sort();
 
