@@ -4,8 +4,19 @@
   module.exports =   function createDreamTeam(members) {  // эта строка нужна
   let sortMembers;
   let team = '';
-  if (typeof members === 'object' && (members != null) && arguments[0]) {
+  if (typeof members === 'object' && 
+    (members != null) && 
+    (members != undefined) && 
+    (members != false) && 
+    arguments[0]) {
   //  console.log('good');
+  for (let elem of members){
+    for (let i = 0; i < elem.length; i++){
+      if(elem[i] === ' '){
+        elem[i] = '';
+      }
+    }
+  }
     sortMembers = members.sort();
 
 
@@ -31,7 +42,7 @@
  //   console.log('wtf2')
     return false;
   }
-  return team;
+  return team.toUpperCase();
 };
 // let arr = ['Brenda', 'Terry', 'Karen', 'Deborah', 'Samantha', 'Roy', 'Helen', 'Victoria', 'Adam', 'Michelle'];
 // //let arr = 123;
