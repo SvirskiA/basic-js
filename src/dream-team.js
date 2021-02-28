@@ -1,6 +1,6 @@
 // ['Brenda', 'Terry', 'Karen', 'Deborah', 'Samantha', 'Roy', 'Helen', 'Victoria', 'Adam', 'Michelle']
 // 'ABDHKMRSTV' - ABDHKMRSTV
-//let createDreamTeam = function (members) {
+// let createDreamTeam = function (members) {
   module.exports =   function createDreamTeam(members) {  // эта строка нужна
   let sortMembers;
   let team = '';
@@ -9,15 +9,23 @@
     (members != undefined) && 
     (members != false) && 
     arguments[0]) {
-  //  console.log('good');
-  for (let elem of members){
-    for (let i = 0; i < elem.length; i++){
-      if(elem[i] === ' '){
-        elem[i] = '';
-      }
+   console.log('good');
+  // for (let elem of members){
+  //   for (let i = 0; i < elem.length; i++){
+  //     if(elem[i] === ' '){
+  //       elem[i] = '';
+  //     }
+  //   }
+  // }
+  let trimmedArr = [];
+  for (let i = 0; i < members.length; i += 1) {
+    console.log(typeof members[i]);
+    if (members[i] && typeof members[i] == 'string') {
+      trimmedArr.push(members[i].trim());
     }
+   console.log(trimmedArr);
   }
-    sortMembers = members.sort();
+    sortMembers = trimmedArr.sort();
 
 
 
@@ -42,6 +50,7 @@
  //   console.log('wtf2')
     return false;
   }
+  console.log(team.toUpperCase());
   return team.toUpperCase();
 };
 // let arr = ['Brenda', 'Terry', 'Karen', 'Deborah', 'Samantha', 'Roy', 'Helen', 'Victoria', 'Adam', 'Michelle'];
@@ -49,3 +58,16 @@
 // let aa = createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]);
 // console.log(aa);
 // console.log(typeof arr === 'object');
+// createDreamTeam([
+//   ['David Abram'],
+//   ['Robin Attfield'],
+//   'Thomas Berry',
+//   ['Paul R.Ehrlich'],
+//   'donna Haraway',
+//   ' BrIaN_gOodWiN  ',
+//   {
+//     0: 'Serenella Iovino'
+//   },
+//   'Erazim Kohak',
+//   '  val_plumwood',
+// ])
