@@ -1,4 +1,9 @@
+// function transform(array) {
 module.exports = function transform(array) {
+    // typeof array != 'object' ? throw new Error() : false;
+    if(Array.isArray(array) === false) {
+        throw new Error();
+    }
 	if(array){
 		for (let i = 0; i < array.length; i++){
             if (array[i]){
@@ -21,8 +26,10 @@ module.exports = function transform(array) {
                     array.splice(i,1);
                 }
             }
-			
 		}	
-	}
+    }
+    //  else {
+    //     throw new Error()
+    // }
 	return array;
 };
